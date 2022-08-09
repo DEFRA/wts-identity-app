@@ -1,10 +1,4 @@
-module.exports = [{
-    method: 'GET',
-    path: '/',
-    handler: {
-        view: 'login'
-    }
-},
+module.exports = [
 {
     method: 'GET',
     path: '/login',
