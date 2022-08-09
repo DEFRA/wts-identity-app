@@ -1,0 +1,42 @@
+{
+  "name": "wts-identity-app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build:css": "bin/build-css",
+    "buildx": "bin/build",
+    "buildw": "./node_modules/.bin/node-sass --output-style=expanded --output=server/public/build/stylesheets client/sass",
+    "clean": "rm -rf .nyc_output coverage logs node_modules release",
+    "compile:sass": "node-sass --output-style=expanded --output=server/public/build/stylesheets client/sass",
+    "lint": "standard",
+    "unit-test": "lab -c -r console -o stdout -r lcov -o lcov.info",
+    "test": "npm run lint && npm run unit-test",
+    "postinstallxx": "npm run compile:sass"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "9.1.4",
+    "@hapi/hapi": "20.2.1",
+    "@hapi/inert": "6.0.5",
+    "@hapi/joi": "17.1.1",
+    "@hapi/vision": "6.1.0",
+    "@ministryofjustice/frontend": "^1.2.0",
+    "blipp": "4.0.2",
+    "govuk-frontend": "4.0.0",
+    "hapi-pino": "9.1.1",
+    "node-sass": "7.0.1",
+    "nunjucks": "3.2.3",
+    "oidc-provider": "^7.11.2",
+    "rimraf": "^3.0.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@hapi/code": "8.0.6",
+    "@hapi/lab": "24.5.1",
+    "codeclimate-test-reporter": "0.5.1",
+    "standard": "16.0.4"
+  }
+}
