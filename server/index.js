@@ -79,6 +79,7 @@ const dealer = {
 };
 const relationship_1 = uuidv4();
 const relationship_2 = uuidv4();
+const relationship_3 = uuidv4();
 const userData = [
   {
     aal: 1,
@@ -143,6 +144,40 @@ const userData = [
         {
             relationshipId: relationship_2,
             roleName: "WINRecorder",
+            status: 3,
+        }
+    ],
+    uniqueReference : uuidv4(),
+  },
+  {
+    aal: 1,
+    accountId: "User003",
+    id: "User003",
+    pwd: "xxx",
+    firstName: "Rick",
+    lastName: "Buckler",
+    contactId: uuidv4(),
+    correlationId: uuidv4(),
+    currentRelationshipId: relationship_3,
+    enrolmentCount: 1,
+    enrolmentRequestCount: 1,
+    loa: 0,
+    serviceId,
+    sessionId: uuidv4(),
+    relationships: [
+      {
+          relationshipId: relationship_3,
+          organisationId: dealer.orgId,
+          organisationName: dealer.orgName,
+          organisationLoa: 0,
+          relationship: "Employee",
+          relationshipLoa: 0,
+      },
+    ],
+    roles: [
+        {
+            relationshipId: relationship_2,
+            roleName: "WINReader",
             status: 3,
         }
     ],
